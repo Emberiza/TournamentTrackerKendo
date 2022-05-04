@@ -30,38 +30,58 @@
         {
             System.Windows.Forms.ListBox tournamentPlayersListBox;
             System.Windows.Forms.ListBox prizesListBox;
-            this.label2 = new System.Windows.Forms.Label();
+            this.createTournamentLabel = new System.Windows.Forms.Label();
             this.newTournamentNameBox = new System.Windows.Forms.TextBox();
             this.teamOneName = new System.Windows.Forms.Label();
             this.newEntryFeeBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.entryFeeLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.selectTeamLabel = new System.Windows.Forms.Label();
             this.createNewNameLabel = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelř = new System.Windows.Forms.Label();
+            this.tournamentPlayersLabel = new System.Windows.Forms.Label();
+            this.prizesLabel = new System.Windows.Forms.Label();
             this.addTeamButton = new System.Windows.Forms.Button();
             this.addPrizeButtpn = new System.Windows.Forms.Button();
             tournamentPlayersListBox = new System.Windows.Forms.ListBox();
             prizesListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // label2
+            // tournamentPlayersListBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(323, 39);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Create Tournament:";
+            tournamentPlayersListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            tournamentPlayersListBox.FormattingEnabled = true;
+            tournamentPlayersListBox.ItemHeight = 39;
+            tournamentPlayersListBox.Location = new System.Drawing.Point(390, 117);
+            tournamentPlayersListBox.Name = "tournamentPlayersListBox";
+            tournamentPlayersListBox.Size = new System.Drawing.Size(401, 236);
+            tournamentPlayersListBox.TabIndex = 16;
+            // 
+            // prizesListBox
+            // 
+            prizesListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            prizesListBox.FormattingEnabled = true;
+            prizesListBox.ItemHeight = 39;
+            prizesListBox.Location = new System.Drawing.Point(390, 398);
+            prizesListBox.Name = "prizesListBox";
+            prizesListBox.Size = new System.Drawing.Size(358, 158);
+            prizesListBox.TabIndex = 18;
+            // 
+            // createTournamentLabel
+            // 
+            this.createTournamentLabel.AutoSize = true;
+            this.createTournamentLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.createTournamentLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.createTournamentLabel.Location = new System.Drawing.Point(12, 9);
+            this.createTournamentLabel.Name = "createTournamentLabel";
+            this.createTournamentLabel.Size = new System.Drawing.Size(323, 39);
+            this.createTournamentLabel.TabIndex = 3;
+            this.createTournamentLabel.Text = "Create Tournament:";
             // 
             // newTournamentNameBox
             // 
             this.newTournamentNameBox.Location = new System.Drawing.Point(19, 117);
             this.newTournamentNameBox.Name = "newTournamentNameBox";
-            this.newTournamentNameBox.Size = new System.Drawing.Size(365, 46);
+            this.newTournamentNameBox.Size = new System.Drawing.Size(365, 41);
             this.newTournamentNameBox.TabIndex = 9;
             // 
             // teamOneName
@@ -83,16 +103,16 @@
             this.newEntryFeeBox.Size = new System.Drawing.Size(188, 47);
             this.newEntryFeeBox.TabIndex = 11;
             // 
-            // label1
+            // entryFeeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 39);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Entry Fee:";
+            this.entryFeeLabel.AutoSize = true;
+            this.entryFeeLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.entryFeeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.entryFeeLabel.Location = new System.Drawing.Point(12, 189);
+            this.entryFeeLabel.Name = "entryFeeLabel";
+            this.entryFeeLabel.Size = new System.Drawing.Size(187, 39);
+            this.entryFeeLabel.TabIndex = 10;
+            this.entryFeeLabel.Text = "Entry Fee:";
             // 
             // comboBox1
             // 
@@ -102,16 +122,16 @@
             this.comboBox1.Size = new System.Drawing.Size(360, 47);
             this.comboBox1.TabIndex = 13;
             // 
-            // label3
+            // selectTeamLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(17, 263);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 39);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Select Name:";
+            this.selectTeamLabel.AutoSize = true;
+            this.selectTeamLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.selectTeamLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.selectTeamLabel.Location = new System.Drawing.Point(17, 263);
+            this.selectTeamLabel.Name = "selectTeamLabel";
+            this.selectTeamLabel.Size = new System.Drawing.Size(221, 39);
+            this.selectTeamLabel.TabIndex = 12;
+            this.selectTeamLabel.Text = "Select Team:";
             // 
             // createNewNameLabel
             // 
@@ -126,47 +146,27 @@
             this.createNewNameLabel.TabStop = true;
             this.createNewNameLabel.Text = "create new";
             // 
-            // tournamentPlayersListBox
+            // tournamentPlayersLabel
             // 
-            tournamentPlayersListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            tournamentPlayersListBox.FormattingEnabled = true;
-            tournamentPlayersListBox.ItemHeight = 39;
-            tournamentPlayersListBox.Location = new System.Drawing.Point(390, 117);
-            tournamentPlayersListBox.Name = "tournamentPlayersListBox";
-            tournamentPlayersListBox.Size = new System.Drawing.Size(401, 236);
-            tournamentPlayersListBox.TabIndex = 16;
+            this.tournamentPlayersLabel.AutoSize = true;
+            this.tournamentPlayersLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tournamentPlayersLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tournamentPlayersLabel.Location = new System.Drawing.Point(383, 74);
+            this.tournamentPlayersLabel.Name = "tournamentPlayersLabel";
+            this.tournamentPlayersLabel.Size = new System.Drawing.Size(340, 39);
+            this.tournamentPlayersLabel.TabIndex = 15;
+            this.tournamentPlayersLabel.Text = "Tournament Players:";
             // 
-            // label4
+            // prizesLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(383, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(340, 39);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Tournament Players:";
-            // 
-            // prizesListBox
-            // 
-            prizesListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            prizesListBox.FormattingEnabled = true;
-            prizesListBox.ItemHeight = 39;
-            prizesListBox.Location = new System.Drawing.Point(390, 398);
-            prizesListBox.Name = "prizesListBox";
-            prizesListBox.Size = new System.Drawing.Size(358, 158);
-            prizesListBox.TabIndex = 18;
-            // 
-            // labelř
-            // 
-            this.labelř.AutoSize = true;
-            this.labelř.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelř.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelř.Location = new System.Drawing.Point(383, 356);
-            this.labelř.Name = "labelř";
-            this.labelř.Size = new System.Drawing.Size(136, 39);
-            this.labelř.TabIndex = 17;
-            this.labelř.Text = "Prizes:";
+            this.prizesLabel.AutoSize = true;
+            this.prizesLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prizesLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.prizesLabel.Location = new System.Drawing.Point(383, 356);
+            this.prizesLabel.Name = "prizesLabel";
+            this.prizesLabel.Size = new System.Drawing.Size(136, 39);
+            this.prizesLabel.TabIndex = 17;
+            this.prizesLabel.Text = "Prizes:";
             // 
             // addTeamButton
             // 
@@ -199,17 +199,17 @@
             this.Controls.Add(this.addPrizeButtpn);
             this.Controls.Add(this.addTeamButton);
             this.Controls.Add(prizesListBox);
-            this.Controls.Add(this.labelř);
+            this.Controls.Add(this.prizesLabel);
             this.Controls.Add(tournamentPlayersListBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tournamentPlayersLabel);
             this.Controls.Add(this.createNewNameLabel);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.selectTeamLabel);
             this.Controls.Add(this.newEntryFeeBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.entryFeeLabel);
             this.Controls.Add(this.newTournamentNameBox);
             this.Controls.Add(this.teamOneName);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.createTournamentLabel);
             this.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "CreateTournamentForm";
@@ -221,16 +221,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label createTournamentLabel;
         private System.Windows.Forms.TextBox newTournamentNameBox;
         private System.Windows.Forms.Label teamOneName;
         private System.Windows.Forms.ComboBox newEntryFeeBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label entryFeeLabel;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label selectTeamLabel;
         private System.Windows.Forms.LinkLabel createNewNameLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelř;
+        private System.Windows.Forms.Label tournamentPlayersLabel;
+        private System.Windows.Forms.Label prizesLabel;
         private System.Windows.Forms.Button addTeamButton;
         private System.Windows.Forms.Button addPrizeButtpn;
     }
