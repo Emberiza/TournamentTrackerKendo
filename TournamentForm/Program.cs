@@ -16,7 +16,12 @@ namespace TournamentForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TournamentDashboardForm());
+
+            TournamentLibrary.GlobalConfig.InitializeConnection();
+
+            // Application.Run(new TournamentDashboardForm());
+            Application.Run(new CreatePrizeForm());
+
         }
     }
 }

@@ -145,6 +145,7 @@
             this.createPrizeButton.TabIndex = 25;
             this.createPrizeButton.Text = "Create Prize";
             this.createPrizeButton.UseVisualStyleBackColor = false;
+            this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
             // CreatePrizeForm
             // 
@@ -164,7 +165,7 @@
             this.Controls.Add(this.placeNumberLabel);
             this.Controls.Add(this.createPrizeLabel);
             this.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreatePrizeForm";
             this.Text = "Create Prize";
             this.ResumeLayout(false);

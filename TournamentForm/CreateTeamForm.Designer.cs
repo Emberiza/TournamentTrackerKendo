@@ -47,6 +47,8 @@
             this.createMemberButton = new System.Windows.Forms.Button();
             this.deleteSelectedMemberButton = new System.Windows.Forms.Button();
             this.createTeamButton = new System.Windows.Forms.Button();
+            this.rankLabel = new System.Windows.Forms.Label();
+            this.rankDropDown = new System.Windows.Forms.ComboBox();
             teamMembersListBox = new System.Windows.Forms.ListBox();
             this.addNewMemberGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +114,8 @@
             // 
             // addNewMemberGroupBox
             // 
+            this.addNewMemberGroupBox.Controls.Add(this.rankDropDown);
+            this.addNewMemberGroupBox.Controls.Add(this.rankLabel);
             this.addNewMemberGroupBox.Controls.Add(this.createMemberButton);
             this.addNewMemberGroupBox.Controls.Add(this.ageValue);
             this.addNewMemberGroupBox.Controls.Add(this.ageLabel);
@@ -123,7 +127,7 @@
             this.addNewMemberGroupBox.Controls.Add(this.firstNameLabel);
             this.addNewMemberGroupBox.Location = new System.Drawing.Point(19, 363);
             this.addNewMemberGroupBox.Name = "addNewMemberGroupBox";
-            this.addNewMemberGroupBox.Size = new System.Drawing.Size(365, 260);
+            this.addNewMemberGroupBox.Size = new System.Drawing.Size(365, 288);
             this.addNewMemberGroupBox.TabIndex = 23;
             this.addNewMemberGroupBox.TabStop = false;
             this.addNewMemberGroupBox.Text = "Add New Member";
@@ -204,7 +208,7 @@
             // 
             this.createMemberButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.createMemberButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.createMemberButton.Location = new System.Drawing.Point(105, 192);
+            this.createMemberButton.Location = new System.Drawing.Point(96, 231);
             this.createMemberButton.Name = "createMemberButton";
             this.createMemberButton.Size = new System.Drawing.Size(164, 51);
             this.createMemberButton.TabIndex = 16;
@@ -236,12 +240,31 @@
             // 
             this.createTeamButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.createTeamButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.createTeamButton.Location = new System.Drawing.Point(369, 649);
+            this.createTeamButton.Location = new System.Drawing.Point(390, 649);
             this.createTeamButton.Name = "createTeamButton";
             this.createTeamButton.Size = new System.Drawing.Size(190, 77);
             this.createTeamButton.TabIndex = 17;
             this.createTeamButton.Text = "Create Team";
             this.createTeamButton.UseVisualStyleBackColor = false;
+            // 
+            // rankLabel
+            // 
+            this.rankLabel.AutoSize = true;
+            this.rankLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rankLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rankLabel.Location = new System.Drawing.Point(10, 189);
+            this.rankLabel.Name = "rankLabel";
+            this.rankLabel.Size = new System.Drawing.Size(102, 39);
+            this.rankLabel.TabIndex = 17;
+            this.rankLabel.Text = "Rank:";
+            // 
+            // rankDropDown
+            // 
+            this.rankDropDown.FormattingEnabled = true;
+            this.rankDropDown.Location = new System.Drawing.Point(201, 197);
+            this.rankDropDown.Name = "rankDropDown";
+            this.rankDropDown.Size = new System.Drawing.Size(156, 33);
+            this.rankDropDown.TabIndex = 24;
             // 
             // CreateTeamForm
             // 
@@ -290,5 +313,7 @@
         private System.Windows.Forms.Button createMemberButton;
         private System.Windows.Forms.Button deleteSelectedMemberButton;
         private System.Windows.Forms.Button createTeamButton;
+        private System.Windows.Forms.Label rankLabel;
+        private System.Windows.Forms.ComboBox rankDropDown;
     }
 }
