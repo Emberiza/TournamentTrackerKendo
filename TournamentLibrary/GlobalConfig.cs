@@ -10,11 +10,11 @@ namespace TournamentLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; }
-        public static void InitializeConnection()
+        public static IDataConnection Connections { get; private set; }
+        public static void InitializeConnection(bool database)
         {
             SqlConnector sql = new SqlConnector();
-            Connections.Add(sql);
+            Connections = sql;
         }
         public static string CnnString(string name)
         {

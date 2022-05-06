@@ -15,24 +15,29 @@ namespace TournamentForm
 {
     public partial class CreatePrizeForm : Form
     {
-        public CreatePrizeForm()
+		IPrizeRequester callingForm;
+        public CreatePrizeForm(IPrizeRequester caller)
         {
             InitializeComponent();
-        }
 
-        private void createPrizeButton_Click(object sender, EventArgs e)
+			callingForm = caller;
+		}
+
+		private void createPrizeButton_Click(object sender, EventArgs e)
         {
 			if(ValidateForm())
             {
-				PrizeModel model = new PrizeModel(placeNameValue.Text, placeNumberValue.Text, prizeAmountValue.Text, prizePercentageValue.Text);
-				foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-					db.CreatePrize(model);
-                }
-				placeNameValue.Text = String.Empty;
-				placeNumberValue.Text = String.Empty;
-				prizeAmountValue.Text = "0";
-				prizePercentageValue.Text = "0";
+				PrizeModel model = new PrizeModel(
+					placeNumberValue.Text,
+					placeNameValue.Text,
+					prizeAmountValue.Text,
+					prizePercentageValue.Text);
+
+				GlobalConfig.Connections.CreatePrize(model);
+
+				callingForm.PrizeComplete(model);
+
+				this.Close();
 			}
 			else
             {
