@@ -31,7 +31,7 @@
             this.tournamentDashboardLabel = new System.Windows.Forms.Label();
             this.selectExistingTournamentDropDown = new System.Windows.Forms.ComboBox();
             this.loadExistingTournamentLabel = new System.Windows.Forms.Label();
-            this.loadExistingTournamentButton = new System.Windows.Forms.Button();
+            this.loadTournamentButton = new System.Windows.Forms.Button();
             this.createTournamentButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,16 +65,17 @@
             this.loadExistingTournamentLabel.TabIndex = 22;
             this.loadExistingTournamentLabel.Text = "Load Existing Tournament:";
             // 
-            // loadExistingTournamentButton
+            // loadTournamentButton
             // 
-            this.loadExistingTournamentButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.loadExistingTournamentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.loadExistingTournamentButton.Location = new System.Drawing.Point(150, 176);
-            this.loadExistingTournamentButton.Name = "loadExistingTournamentButton";
-            this.loadExistingTournamentButton.Size = new System.Drawing.Size(186, 51);
-            this.loadExistingTournamentButton.TabIndex = 24;
-            this.loadExistingTournamentButton.Text = "Load Tournament";
-            this.loadExistingTournamentButton.UseVisualStyleBackColor = false;
+            this.loadTournamentButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.loadTournamentButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loadTournamentButton.Location = new System.Drawing.Point(150, 176);
+            this.loadTournamentButton.Name = "loadTournamentButton";
+            this.loadTournamentButton.Size = new System.Drawing.Size(186, 51);
+            this.loadTournamentButton.TabIndex = 24;
+            this.loadTournamentButton.Text = "Load Tournament";
+            this.loadTournamentButton.UseVisualStyleBackColor = false;
+            this.loadTournamentButton.Click += new System.EventHandler(this.loadTournamentButton_Click);
             // 
             // createTournamentButton
             // 
@@ -86,6 +87,7 @@
             this.createTournamentButton.TabIndex = 26;
             this.createTournamentButton.Text = "Create Tournament";
             this.createTournamentButton.UseVisualStyleBackColor = false;
+            this.createTournamentButton.Click += new System.EventHandler(this.createTournamentButton_Click);
             // 
             // TournamentDashboardForm
             // 
@@ -94,12 +96,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(494, 353);
             this.Controls.Add(this.createTournamentButton);
-            this.Controls.Add(this.loadExistingTournamentButton);
+            this.Controls.Add(this.loadTournamentButton);
             this.Controls.Add(this.selectExistingTournamentDropDown);
             this.Controls.Add(this.loadExistingTournamentLabel);
             this.Controls.Add(this.tournamentDashboardLabel);
             this.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TournamentDashboardForm";
             this.Text = "Tournament Dashboard";
             this.ResumeLayout(false);
@@ -112,7 +114,7 @@
         private System.Windows.Forms.Label tournamentDashboardLabel;
         private System.Windows.Forms.ComboBox selectExistingTournamentDropDown;
         private System.Windows.Forms.Label loadExistingTournamentLabel;
-        private System.Windows.Forms.Button loadExistingTournamentButton;
+        private System.Windows.Forms.Button loadTournamentButton;
         private System.Windows.Forms.Button createTournamentButton;
     }
 }

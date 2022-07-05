@@ -19,8 +19,8 @@ namespace TournamentForm
 
             TournamentLibrary.GlobalConfig.InitializeConnection(true);
 
-            // Application.Run(new TournamentDashboardForm());
-            Application.Run(new CreateTournamentForm());
+            Application.Run(new TournamentDashboardForm());
+
 
         }
     }

@@ -28,10 +28,9 @@ namespace TournamentForm
 			if(ValidateForm())
             {
 				PrizeModel model = new PrizeModel(
-					placeNumberValue.Text,
-					placeNameValue.Text,
-					prizeAmountValue.Text,
-					prizePercentageValue.Text);
+					prizeNameValue.Text,
+					prizeNumberValue.Text,
+					prizeAmountValue.Text);
 
 				GlobalConfig.Connections.CreatePrize(model);
 
@@ -47,40 +46,24 @@ namespace TournamentForm
 		private bool ValidateForm()
 		{
 			bool output = true;
-			bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out int placeNumber);
+			bool prizeNumberValidNumber = int.TryParse(prizeNumberValue.Text, out int prizeNumber);
 
-			if (placeNumberValidNumber == false)
+			if (prizeNumberValidNumber == false)
 			{
 				output = false;
 			}
 
-			if (placeNumber < 1)
+			if (prizeNameValue.Text.Length == 0)
 			{
 				output = false;
 			}
 
-			if (placeNameValue.Text.Length == 0)
+			if (prizeNumber < 1)
 			{
 				output = false;
 			}
 
 			bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out decimal prizeAmount);
-			bool prizePercentageValid = int.TryParse(prizePercentageValue.Text, out int prizePercentage);
-
-			if (prizeAmountValid == false || prizePercentageValid == false)
-			{
-				output = false;
-			}
-
-			if (prizeAmount <= 0 && prizePercentage <= 0)
-			{
-				output = false;
-			}
-
-			if (prizePercentage < 0 || prizePercentage > 100)
-			{
-				output = false;
-			}
 
 			return output;
 		}

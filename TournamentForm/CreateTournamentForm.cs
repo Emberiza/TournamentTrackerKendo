@@ -36,7 +36,7 @@ namespace TournamentForm
 
             prizesListBox.DataSource = null;
             prizesListBox.DataSource = selectedPrizes;
-            prizesListBox.DisplayMember = "PlaceName";
+            prizesListBox.DisplayMember = "PrizeName";
         }
         private void addTeamButton_Click(object sender, System.EventArgs e)
         {
@@ -112,38 +112,55 @@ namespace TournamentForm
             }
         }
 
-
         private void createNewTournamentButton_Click(object sender, EventArgs e)
         {
+            // Validate data
             decimal fee = 0;
 
             bool feeAcceptable = decimal.TryParse(newEntryFeeValue.Text, out fee);
 
             if (!feeAcceptable)
             {
-                MessageBox.Show("You need to enter a valid Entry Fee.", "Invalid Fee", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You need to enter a valid Entry Fee.",
+                    "Invalid Fee",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
 
-            TournamentModel tm = new TournamentModel
-            {
-                TournamentName = newTournamentValue.Text,
-                EntryFee = fee,
-                Prizes = selectedPrizes,
-                EnteredTeams = selectedTeams
-            };
+            // Create our Tournament
+            TournamentModel tm = new TournamentModel();
 
-            //TournamentLogic.CreateRounds(tm);
+            tm.TournamentName = newTournamentValue.Text;
+            tm.EntryFee = fee;
+            tm.Prizes = selectedPrizes;
+            tm.EnteredTeams = selectedTeams;
+            
 
+            // Wire our matchups
+            TournamentLogic.CreateRounds(tm);
+
+            // Create Tournament entry
+            // Create all of the Prize entries
+            // Create all of the Team entries
             GlobalConfig.Connections.CreateTournament(tm);
 
-            //TODO ALERT
 
+            tm.AlertUsersToNewRound();
 
-            //TODO TournamentViewerForm
-            //TournamentViewerForm frm = new TournamentViewerForm(tm);
-            //frm.Show();
-            //this.Close();
+            TournamentViewerForm frm = new TournamentViewerForm(tm);
+            frm.Show();
+            this.Close();
+        }
+
+        private void danCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            //var filterDan =
+        }
+
+        private void ryuCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

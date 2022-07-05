@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.createPrizeLabel = new System.Windows.Forms.Label();
-            this.prizePercentageValue = new System.Windows.Forms.TextBox();
-            this.prizePercentageLabel = new System.Windows.Forms.Label();
             this.prizeAmountValue = new System.Windows.Forms.TextBox();
             this.prizeAmountLabel = new System.Windows.Forms.Label();
-            this.placeNameValue = new System.Windows.Forms.TextBox();
-            this.placeNameLabel = new System.Windows.Forms.Label();
-            this.placeNumberValue = new System.Windows.Forms.TextBox();
-            this.placeNumberLabel = new System.Windows.Forms.Label();
-            this.orLabel = new System.Windows.Forms.Label();
+            this.prizeNumberValue = new System.Windows.Forms.TextBox();
+            this.prizeNumberLabel = new System.Windows.Forms.Label();
             this.createPrizeButton = new System.Windows.Forms.Button();
+            this.prizeNameLabel = new System.Windows.Forms.Label();
+            this.prizeNameValue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // createPrizeLabel
@@ -51,24 +48,6 @@
             this.createPrizeLabel.Size = new System.Drawing.Size(238, 39);
             this.createPrizeLabel.TabIndex = 11;
             this.createPrizeLabel.Text = "Create Prize:";
-            // 
-            // prizePercentageValue
-            // 
-            this.prizePercentageValue.Location = new System.Drawing.Point(358, 303);
-            this.prizePercentageValue.Name = "prizePercentageValue";
-            this.prizePercentageValue.Size = new System.Drawing.Size(156, 30);
-            this.prizePercentageValue.TabIndex = 23;
-            // 
-            // prizePercentageLabel
-            // 
-            this.prizePercentageLabel.AutoSize = true;
-            this.prizePercentageLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prizePercentageLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.prizePercentageLabel.Location = new System.Drawing.Point(57, 294);
-            this.prizePercentageLabel.Name = "prizePercentageLabel";
-            this.prizePercentageLabel.Size = new System.Drawing.Size(306, 39);
-            this.prizePercentageLabel.TabIndex = 22;
-            this.prizePercentageLabel.Text = "Prize Percentage:";
             // 
             // prizeAmountValue
             // 
@@ -88,58 +67,29 @@
             this.prizeAmountLabel.TabIndex = 20;
             this.prizeAmountLabel.Text = "Prize Amount:";
             // 
-            // placeNameValue
+            // prizeNumberValue
             // 
-            this.placeNameValue.Location = new System.Drawing.Point(358, 136);
-            this.placeNameValue.Name = "placeNameValue";
-            this.placeNameValue.Size = new System.Drawing.Size(156, 30);
-            this.placeNameValue.TabIndex = 19;
+            this.prizeNumberValue.Location = new System.Drawing.Point(358, 128);
+            this.prizeNumberValue.Name = "prizeNumberValue";
+            this.prizeNumberValue.Size = new System.Drawing.Size(156, 30);
+            this.prizeNumberValue.TabIndex = 17;
             // 
-            // placeNameLabel
+            // prizeNumberLabel
             // 
-            this.placeNameLabel.AutoSize = true;
-            this.placeNameLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.placeNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.placeNameLabel.Location = new System.Drawing.Point(57, 128);
-            this.placeNameLabel.Name = "placeNameLabel";
-            this.placeNameLabel.Size = new System.Drawing.Size(204, 39);
-            this.placeNameLabel.TabIndex = 18;
-            this.placeNameLabel.Text = "Place Name:";
-            // 
-            // placeNumberValue
-            // 
-            this.placeNumberValue.Location = new System.Drawing.Point(358, 95);
-            this.placeNumberValue.Name = "placeNumberValue";
-            this.placeNumberValue.Size = new System.Drawing.Size(156, 30);
-            this.placeNumberValue.TabIndex = 17;
-            // 
-            // placeNumberLabel
-            // 
-            this.placeNumberLabel.AutoSize = true;
-            this.placeNumberLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.placeNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.placeNumberLabel.Location = new System.Drawing.Point(55, 87);
-            this.placeNumberLabel.Name = "placeNumberLabel";
-            this.placeNumberLabel.Size = new System.Drawing.Size(238, 39);
-            this.placeNumberLabel.TabIndex = 16;
-            this.placeNumberLabel.Text = "Place Number:";
-            // 
-            // orLabel
-            // 
-            this.orLabel.AutoSize = true;
-            this.orLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.orLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.orLabel.Location = new System.Drawing.Point(261, 235);
-            this.orLabel.Name = "orLabel";
-            this.orLabel.Size = new System.Drawing.Size(51, 39);
-            this.orLabel.TabIndex = 24;
-            this.orLabel.Text = "OR";
+            this.prizeNumberLabel.AutoSize = true;
+            this.prizeNumberLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prizeNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.prizeNumberLabel.Location = new System.Drawing.Point(57, 119);
+            this.prizeNumberLabel.Name = "prizeNumberLabel";
+            this.prizeNumberLabel.Size = new System.Drawing.Size(238, 39);
+            this.prizeNumberLabel.TabIndex = 16;
+            this.prizeNumberLabel.Text = "Prize Number:";
             // 
             // createPrizeButton
             // 
             this.createPrizeButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.createPrizeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.createPrizeButton.Location = new System.Drawing.Point(188, 379);
+            this.createPrizeButton.Location = new System.Drawing.Point(191, 258);
             this.createPrizeButton.Name = "createPrizeButton";
             this.createPrizeButton.Size = new System.Drawing.Size(190, 77);
             this.createPrizeButton.TabIndex = 25;
@@ -147,27 +97,42 @@
             this.createPrizeButton.UseVisualStyleBackColor = false;
             this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
+            // prizeNameLabel
+            // 
+            this.prizeNameLabel.AutoSize = true;
+            this.prizeNameLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prizeNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.prizeNameLabel.Location = new System.Drawing.Point(57, 70);
+            this.prizeNameLabel.Name = "prizeNameLabel";
+            this.prizeNameLabel.Size = new System.Drawing.Size(204, 39);
+            this.prizeNameLabel.TabIndex = 26;
+            this.prizeNameLabel.Text = "Prize Name:";
+            // 
+            // prizeNameValue
+            // 
+            this.prizeNameValue.Location = new System.Drawing.Point(358, 79);
+            this.prizeNameValue.Name = "prizeNameValue";
+            this.prizeNameValue.Size = new System.Drawing.Size(156, 30);
+            this.prizeNameValue.TabIndex = 27;
+            // 
             // CreatePrizeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(581, 514);
+            this.ClientSize = new System.Drawing.Size(581, 347);
+            this.Controls.Add(this.prizeNameValue);
+            this.Controls.Add(this.prizeNameLabel);
             this.Controls.Add(this.createPrizeButton);
-            this.Controls.Add(this.orLabel);
-            this.Controls.Add(this.prizePercentageValue);
-            this.Controls.Add(this.prizePercentageLabel);
             this.Controls.Add(this.prizeAmountValue);
             this.Controls.Add(this.prizeAmountLabel);
-            this.Controls.Add(this.placeNameValue);
-            this.Controls.Add(this.placeNameLabel);
-            this.Controls.Add(this.placeNumberValue);
-            this.Controls.Add(this.placeNumberLabel);
+            this.Controls.Add(this.prizeNumberValue);
+            this.Controls.Add(this.prizeNumberLabel);
             this.Controls.Add(this.createPrizeLabel);
             this.Font = new System.Drawing.Font("Cascadia Code", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreatePrizeForm";
-            this.Text = "Create Prize";
+            this.Text = "r";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,15 +141,12 @@
         #endregion
 
         private System.Windows.Forms.Label createPrizeLabel;
-        private System.Windows.Forms.TextBox prizePercentageValue;
-        private System.Windows.Forms.Label prizePercentageLabel;
         private System.Windows.Forms.TextBox prizeAmountValue;
         private System.Windows.Forms.Label prizeAmountLabel;
-        private System.Windows.Forms.TextBox placeNameValue;
-        private System.Windows.Forms.Label placeNameLabel;
-        private System.Windows.Forms.TextBox placeNumberValue;
-        private System.Windows.Forms.Label placeNumberLabel;
-        private System.Windows.Forms.Label orLabel;
+        private System.Windows.Forms.TextBox prizeNumberValue;
+        private System.Windows.Forms.Label prizeNumberLabel;
         private System.Windows.Forms.Button createPrizeButton;
+        private System.Windows.Forms.Label prizeNameLabel;
+        private System.Windows.Forms.TextBox prizeNameValue;
     }
 }

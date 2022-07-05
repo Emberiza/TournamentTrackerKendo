@@ -8,24 +8,20 @@ namespace TournamentLibrary.Models
 {
     public class PrizeModel
     {
-        public int PlaceNumber { get; set; }
-        public string PlaceName { get; set; }
+        public int PrizeNumber { get; set; }
+        public string PrizeName { get; set; }
         public decimal PrizeAmount { get; set; }
-        public double PrizePercentage { get; set; }
         public int Id { get; set; }
         public PrizeModel() {}
-        public PrizeModel(string placeName, string placeNumber, string prizeAmount, string prizePercentage)
+        public PrizeModel(string prizeName, string prizeNumber, string prizeAmount)
         {
-            PlaceName = placeName;
+            PrizeName = prizeName;
 
-            int.TryParse(placeNumber, out int placeNumberValue);
-            PlaceNumber = placeNumberValue;
+            int.TryParse(prizeNumber, out int prizeNumberValue);
+            PrizeNumber = prizeNumberValue;
 
             decimal.TryParse(prizeAmount, out decimal prizeAmountValue);
             PrizeAmount = prizeAmountValue;
-
-            double.TryParse(prizePercentage, out double prizePercentageValue);
-            PrizePercentage = prizePercentageValue;
         }
     }
 }
