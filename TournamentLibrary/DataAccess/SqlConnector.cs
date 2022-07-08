@@ -101,6 +101,17 @@ namespace TournamentLibrary.DataAccess
 
             return output;
         }
+        //public List<PersonModel> GETDANRANK()
+        //{
+        //    List<PersonModel> output;
+
+        //    using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Tournaments")))
+        //    {
+        //        output = connection.Query<PersonModel>("[dbo].[GETDANRANK]", new { }, commandType: CommandType.StoredProcedure).ToList();
+        //    }
+        //    return output;
+        //}
+
         public void CreateTournament(TournamentModel model)
         {
             using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Tournaments")))

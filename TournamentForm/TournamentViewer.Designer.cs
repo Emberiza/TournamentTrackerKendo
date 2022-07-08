@@ -59,7 +59,7 @@
             this.tournamentName.AutoSize = true;
             this.tournamentName.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tournamentName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tournamentName.Location = new System.Drawing.Point(486, 37);
+            this.tournamentName.Location = new System.Drawing.Point(487, 37);
             this.tournamentName.Name = "tournamentName";
             this.tournamentName.Size = new System.Drawing.Size(187, 39);
             this.tournamentName.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.teamOneName.AutoSize = true;
             this.teamOneName.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.teamOneName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.teamOneName.Location = new System.Drawing.Point(571, 166);
+            this.teamOneName.Location = new System.Drawing.Point(807, 167);
             this.teamOneName.Name = "teamOneName";
             this.teamOneName.Size = new System.Drawing.Size(255, 39);
             this.teamOneName.TabIndex = 5;
@@ -90,7 +90,7 @@
             this.teamOneScoreLabel.AutoSize = true;
             this.teamOneScoreLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.teamOneScoreLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.teamOneScoreLabel.Location = new System.Drawing.Point(486, 217);
+            this.teamOneScoreLabel.Location = new System.Drawing.Point(722, 218);
             this.teamOneScoreLabel.Name = "teamOneScoreLabel";
             this.teamOneScoreLabel.Size = new System.Drawing.Size(119, 39);
             this.teamOneScoreLabel.TabIndex = 6;
@@ -98,14 +98,14 @@
             // 
             // teamOneScoreValue
             // 
-            this.teamOneScoreValue.Location = new System.Drawing.Point(602, 225);
+            this.teamOneScoreValue.Location = new System.Drawing.Point(838, 226);
             this.teamOneScoreValue.Name = "teamOneScoreValue";
             this.teamOneScoreValue.Size = new System.Drawing.Size(303, 30);
             this.teamOneScoreValue.TabIndex = 7;
             // 
             // teamTwoScoreValue
             // 
-            this.teamTwoScoreValue.Location = new System.Drawing.Point(602, 344);
+            this.teamTwoScoreValue.Location = new System.Drawing.Point(838, 345);
             this.teamTwoScoreValue.Name = "teamTwoScoreValue";
             this.teamTwoScoreValue.Size = new System.Drawing.Size(303, 30);
             this.teamTwoScoreValue.TabIndex = 10;
@@ -115,7 +115,7 @@
             this.teamTwoScoreLabel.AutoSize = true;
             this.teamTwoScoreLabel.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.teamTwoScoreLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.teamTwoScoreLabel.Location = new System.Drawing.Point(486, 336);
+            this.teamTwoScoreLabel.Location = new System.Drawing.Point(722, 337);
             this.teamTwoScoreLabel.Name = "teamTwoScoreLabel";
             this.teamTwoScoreLabel.Size = new System.Drawing.Size(119, 39);
             this.teamTwoScoreLabel.TabIndex = 9;
@@ -126,7 +126,7 @@
             this.teamTwoName.AutoSize = true;
             this.teamTwoName.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.teamTwoName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.teamTwoName.Location = new System.Drawing.Point(571, 285);
+            this.teamTwoName.Location = new System.Drawing.Point(807, 286);
             this.teamTwoName.Name = "teamTwoName";
             this.teamTwoName.Size = new System.Drawing.Size(255, 39);
             this.teamTwoName.TabIndex = 8;
@@ -136,7 +136,7 @@
             // 
             this.scoreButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.scoreButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scoreButton.Location = new System.Drawing.Point(649, 414);
+            this.scoreButton.Location = new System.Drawing.Point(885, 415);
             this.scoreButton.Name = "scoreButton";
             this.scoreButton.Size = new System.Drawing.Size(120, 51);
             this.scoreButton.TabIndex = 11;
@@ -172,7 +172,7 @@
             this.matchupListBox.ItemHeight = 25;
             this.matchupListBox.Location = new System.Drawing.Point(65, 168);
             this.matchupListBox.Name = "matchupListBox";
-            this.matchupListBox.Size = new System.Drawing.Size(415, 354);
+            this.matchupListBox.Size = new System.Drawing.Size(648, 354);
             this.matchupListBox.TabIndex = 13;
             // 
             // TournamentViewerForm
@@ -180,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(934, 650);
+            this.ClientSize = new System.Drawing.Size(1218, 650);
             this.Controls.Add(this.matchupListBox);
             this.Controls.Add(this.unplayedCheckBox);
             this.Controls.Add(this.scoreButton);

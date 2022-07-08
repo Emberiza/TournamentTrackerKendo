@@ -153,14 +153,15 @@ namespace TournamentForm
             this.Close();
         }
 
-        private void danCheckBox_CheckedChanged(object sender, EventArgs e)
+
+
+        private void CreateTournamentForm_Load(object sender, EventArgs e)
         {
-            //var filterDan =
+            // TODO: This line of code loads data into the 'tournamentsDataSet.People' table. You can move, or remove it, as needed.
+            this.peopleTableAdapter.Fill(this.tournamentsDataSet.People);
+
         }
 
-        private void ryuCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

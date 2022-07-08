@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.createTournamentLabel = new System.Windows.Forms.Label();
             this.newTournamentValue = new System.Windows.Forms.TextBox();
             this.teamOneName = new System.Windows.Forms.Label();
@@ -45,8 +46,11 @@
             this.removeSelectedPlayersButton = new System.Windows.Forms.Button();
             this.removeSelectedPrizesButton = new System.Windows.Forms.Button();
             this.createNewTournamentButton = new System.Windows.Forms.Button();
-            this.danCheckBox = new System.Windows.Forms.CheckBox();
-            this.ryuCheckBox = new System.Windows.Forms.CheckBox();
+            this.tournamentsDataSet = new TournamentForm.TournamentsDataSet();
+            this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.peopleTableAdapter = new TournamentForm.TournamentsDataSetTableAdapters.PeopleTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tournamentsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // createTournamentLabel
@@ -169,7 +173,7 @@
             // 
             this.addPrizeButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.addPrizeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addPrizeButton.Location = new System.Drawing.Point(766, 506);
+            this.addPrizeButton.Location = new System.Drawing.Point(766, 399);
             this.addPrizeButton.Name = "addPrizeButton";
             this.addPrizeButton.Size = new System.Drawing.Size(186, 92);
             this.addPrizeButton.TabIndex = 20;
@@ -181,9 +185,9 @@
             // 
             this.tournamentTeamsListBox.FormattingEnabled = true;
             this.tournamentTeamsListBox.ItemHeight = 39;
-            this.tournamentTeamsListBox.Location = new System.Drawing.Point(391, 117);
+            this.tournamentTeamsListBox.Location = new System.Drawing.Point(390, 117);
             this.tournamentTeamsListBox.Name = "tournamentTeamsListBox";
-            this.tournamentTeamsListBox.Size = new System.Drawing.Size(369, 238);
+            this.tournamentTeamsListBox.Size = new System.Drawing.Size(571, 238);
             this.tournamentTeamsListBox.TabIndex = 21;
             // 
             // prizesListBox
@@ -199,7 +203,7 @@
             // 
             this.removeSelectedPlayersButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.removeSelectedPlayersButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.removeSelectedPlayersButton.Location = new System.Drawing.Point(766, 263);
+            this.removeSelectedPlayersButton.Location = new System.Drawing.Point(775, 22);
             this.removeSelectedPlayersButton.Name = "removeSelectedPlayersButton";
             this.removeSelectedPlayersButton.Size = new System.Drawing.Size(186, 92);
             this.removeSelectedPlayersButton.TabIndex = 23;
@@ -211,7 +215,7 @@
             // 
             this.removeSelectedPrizesButton.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.removeSelectedPrizesButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.removeSelectedPrizesButton.Location = new System.Drawing.Point(766, 399);
+            this.removeSelectedPrizesButton.Location = new System.Drawing.Point(766, 506);
             this.removeSelectedPrizesButton.Name = "removeSelectedPrizesButton";
             this.removeSelectedPrizesButton.Size = new System.Drawing.Size(186, 92);
             this.removeSelectedPrizesButton.TabIndex = 24;
@@ -231,36 +235,26 @@
             this.createNewTournamentButton.UseVisualStyleBackColor = false;
             this.createNewTournamentButton.Click += new System.EventHandler(this.createNewTournamentButton_Click);
             // 
-            // danCheckBox
+            // tournamentsDataSet
             // 
-            this.danCheckBox.AutoSize = true;
-            this.danCheckBox.Location = new System.Drawing.Point(766, 115);
-            this.danCheckBox.Name = "danCheckBox";
-            this.danCheckBox.Size = new System.Drawing.Size(87, 43);
-            this.danCheckBox.TabIndex = 26;
-            this.danCheckBox.Text = "Dan";
-            this.danCheckBox.UseVisualStyleBackColor = true;
-            this.danCheckBox.CheckedChanged += new System.EventHandler(this.danCheckBox_CheckedChanged);
+            this.tournamentsDataSet.DataSetName = "TournamentsDataSet";
+            this.tournamentsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ryuCheckBox
+            // peopleBindingSource
             // 
-            this.ryuCheckBox.AutoSize = true;
-            this.ryuCheckBox.Location = new System.Drawing.Point(766, 164);
-            this.ryuCheckBox.Name = "ryuCheckBox";
-            this.ryuCheckBox.Size = new System.Drawing.Size(87, 43);
-            this.ryuCheckBox.TabIndex = 27;
-            this.ryuCheckBox.Text = "Kyu";
-            this.ryuCheckBox.UseVisualStyleBackColor = true;
-            this.ryuCheckBox.CheckedChanged += new System.EventHandler(this.ryuCheckBox_CheckedChanged);
+            this.peopleBindingSource.DataMember = "People";
+            this.peopleBindingSource.DataSource = this.tournamentsDataSet;
+            // 
+            // peopleTableAdapter
+            // 
+            this.peopleTableAdapter.ClearBeforeFill = true;
             // 
             // CreateTournamentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(962, 736);
-            this.Controls.Add(this.ryuCheckBox);
-            this.Controls.Add(this.danCheckBox);
+            this.ClientSize = new System.Drawing.Size(973, 736);
             this.Controls.Add(this.createNewTournamentButton);
             this.Controls.Add(this.removeSelectedPrizesButton);
             this.Controls.Add(this.removeSelectedPlayersButton);
@@ -281,7 +275,10 @@
             this.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "CreateTournamentForm";
-            this.Text = "CreateTournamentForm";
+            this.Text = "Create a new Tournament";
+            this.Load += new System.EventHandler(this.CreateTournamentForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tournamentsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peopleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +303,8 @@
         private System.Windows.Forms.Button removeSelectedPlayersButton;
         private System.Windows.Forms.Button removeSelectedPrizesButton;
         private System.Windows.Forms.Button createNewTournamentButton;
-        private System.Windows.Forms.CheckBox danCheckBox;
-        private System.Windows.Forms.CheckBox ryuCheckBox;
+        private TournamentsDataSet tournamentsDataSet;
+        private System.Windows.Forms.BindingSource peopleBindingSource;
+        private TournamentsDataSetTableAdapters.PeopleTableAdapter peopleTableAdapter;
     }
 }

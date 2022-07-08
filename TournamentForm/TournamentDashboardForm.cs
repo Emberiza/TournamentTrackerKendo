@@ -41,5 +41,6 @@ namespace TournamentForm
 			TournamentViewerForm frm = new TournamentViewerForm(tm);
 			frm.Show();
 		}
+
     }
 }

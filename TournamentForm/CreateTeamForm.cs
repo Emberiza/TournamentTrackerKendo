@@ -49,10 +49,11 @@ namespace TournamentForm
 
 			TeamModel t = new TeamModel();
 
-			string teamname1, teamname2;
+			string teamname1, teamname2, rank;
 			teamname1 = firstNameValue.Text;
 			teamname2 = lastNameValue.Text;
-			t.TeamName = teamname1 + " " + teamname2;
+			rank = rankDropDown.Text;
+			t.TeamName = teamname1 + " " + teamname2 + " | " + rank;
 			t.TeamMembers = selectedTeamMembers;
 
 			GlobalConfig.Connections.CreateTeam(t);
