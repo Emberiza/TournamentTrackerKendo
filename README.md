@@ -10,7 +10,7 @@
 
 - Dan a Kyu ranky jsou zjednodušeny, z důvodu MS SQL databáze (věčné problémy, nestabilita, atd.)
 
-- Pokoušel jsem ses o filtrování listboxu zápasníků podle ranku, ovšem, nepovedlo se mi, tudíž uživatel má u každého zápasníka zobrazen rank
+- Pokoušel jsem se o filtrování listboxu zápasníků podle ranku, ovšem, nepovedlo se mi, tudíž uživatel má u každého zápasníka zobrazen rank
 
 - Custom eventy jsou zhotoveny například ve formě chybových hlášek špatně zadaných bodů (remíza, více než 2, záporné)
 
@@ -58,7 +58,7 @@
 
 # Závěr
 
-Programování této aplikace byl celkově jedna ze zábavnějších předmětů tohoto semestru. S C# jsem měl lehké zkušenosti z jednoho předmětu na bakalářském studiu, ovšem v tom jsme nezacházeli tak podrobně do věcí jako LINQ či Dapper. Největším problémem programování této aplikace byla rozhodně Microsoft SQL Databáze, která se mnou na každém kroku nechtěla spolupracovat. Projekt by se rozhodně dal vylepšit, například věcmi, které jsem nebyl schopen vyřešit (filtrování listboxu z databáze, či generace grafického turnajového pavouka), ovšem již tak jsem přesáhl doporučený časový limit tvorby aplikace. 
+Programování této aplikace byl celkově jeden ze zábavnějších předmětů tohoto semestru. S C# jsem měl lehké zkušenosti z jednoho předmětu na bakalářském studiu, ovšem v tom jsme nezacházeli tak podrobně do věcí jako LINQ či Dapper. Největším problémem programování této aplikace byla rozhodně Microsoft SQL Databáze, která se mnou na každém kroku nechtěla spolupracovat. Projekt by se rozhodně dal vylepšit, například věcmi, které jsem nebyl schopen vyřešit (filtrování listboxu z databáze, či generace grafického turnajového pavouka), ovšem již tak jsem přesáhl doporučený časový limit tvorby aplikace. 
 
 
 
